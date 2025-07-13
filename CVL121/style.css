@@ -127,3 +127,35 @@ header a:hover {
 .resource-sections a:hover {
   text-decoration: underline;
 }
+/* Dark Mode */
+body.dark {
+  background-color: #1a1a1a;
+  color: #f3f3f3;
+}
+
+body.dark header {
+  background: linear-gradient(to right, #111827, #1f2937);
+  color: #f3f3f3;
+}
+
+body.dark header a {
+  color: #93c5fd;
+}
+
+body.dark .resource-sections section {
+  background-color: #2c2c2c;
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .resource-sections h2 {
+  color: #a5b4fc;
+  border-left-color: #818cf8;
+}
+
+body.dark .resource-sections a {
+  color: #60a5fa;
+}
+
+body.dark .resource-sections a:hover {
+  color: #93c5fd;
+}

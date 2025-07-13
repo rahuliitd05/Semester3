@@ -76,4 +76,10 @@
     </section>
   </main>
 </body>
+<script>
+  // Apply saved theme from localStorage
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+  }
+</script>
 </html>

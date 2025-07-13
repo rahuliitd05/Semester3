@@ -11,6 +11,7 @@
   <header>
     <h1>Welcome to Semester 3 Resource Hub</h1>
     <p>Select a course to explore notes, assignments, and more.</p>
+    <button id="toggle-theme">🌙 Dark Mode</button>
   </header>
 
   <main class="course-grid">
@@ -20,5 +21,28 @@
     <a href="./CVL121/cvl121.html" class="course-card">CVL121</a>
     <a href="./CVL141/cvl141.html" class="course-card">CVL141</a>
   </main>
+  
 </body>
+<script>
+  const toggleBtn = document.getElementById("toggle-theme");
+  const body = document.body;
+
+  // Load saved preference
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark");
+    toggleBtn.textContent = "☀️ Light Mode";
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    if (body.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+      toggleBtn.textContent = "☀️ Light Mode";
+    } else {
+      localStorage.setItem("theme", "light");
+      toggleBtn.textContent = "🌙 Dark Mode";
+    }
+  });
+</script>
+
 </html>
