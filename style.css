@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+
+header {
+  padding: 2rem;
+  background-color: #4f46e5;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.course-card {
+  background-color: white;
+  padding: 3rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #4f46e5;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.course-card:hover {
+  background-color: #e0e7ff;
+  transform: scale(1.05);
+}

@@ -1,0 +1,129 @@
+.resource-sections {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: left;
+}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #f4f6fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #4f46e5, #6366f1);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+header a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #c7d2fe;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Main Content */
+.resource-sections {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Each Section Card */
+.resource-sections section {
+  background-color: white;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s;
+}
+
+.resource-sections section:hover {
+  transform: translateY(-4px);
+}
+
+/* Section Headings */
+.resource-sections h2 {
+  color: #4f46e5;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  border-left: 4px solid #6366f1;
+  padding-left: 0.75rem;
+}
+
+/* Resource Links List */
+.resource-sections ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.resource-sections li {
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+}
+
+.resource-sections a {
+  text-decoration: none;
+  color: #1d4ed8;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.resource-sections a:hover {
+  border-bottom: 1px solid #1d4ed8;
+  color: #4338ca;
+}
+
+.resource-sections section {
+  background-color: #fff;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.resource-sections h2 {
+  color: #4f46e5;
+  margin-bottom: 1rem;
+}
+
+.resource-sections ul {
+  padding-left: 1rem;
+}
+
+.resource-sections li {
+  margin-bottom: 0.5rem;
+}
+
+.resource-sections a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.resource-sections a:hover {
+  text-decoration: underline;
+}
