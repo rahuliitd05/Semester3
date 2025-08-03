@@ -30,6 +30,9 @@
     <a href="./CVL 121 New/index.html" class="course-card">CVL121</a>
     <a href="./CVL 141 New/index.html" class="course-card">CVL141</a>
   </main>
+  <div id="view-counter" style="text-align:center; margin-top:20px; font-size:14px; color:#555;">
+  👁️ Views: <span id="count">Loading...</span>
+  </div>
   
 </body>
 <script>
@@ -52,6 +55,13 @@
       toggleBtn.textContent = "🌙 Dark Mode";
     }
   });
+
+    fetch('https://api.countapi.xyz/hit/rahuliitd05.github.io/Semester3')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('count').innerText = data.value;
+    });
+    
 </script>
 
 </html>
