@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Semester 3 Resources</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="./Assets/favicon.png">
-</head>
-<body>
-  <header>
-    <h1>Welcome to Semester 3 Resource Hub</h1>
-    <p>Select a course to explore notes, assignments, and more.</p>
-    <button id="toggle-theme">🌙 Dark Mode</button>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semester 3 Resources</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="./Assets/favicon.png" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Semester 3 Resource Hub</h1>
+      <p>Select a course to explore notes, assignments, and more.</p>
+      <button id="toggle-theme">🌙 Dark Mode</button>
+      <!-- <button
+        id="announcements-btn"
+        onclick="window.location.href='announcements.html'"
+      >
+        📢 Announcements
+      </button> -->
+    </header>
 
-  <h1>Previous Semester Resources</h1>
-  <main class="course-grid">
-    <a href="./APL107/apl107.html" class="course-card">APL107</a>
-    <a href="./APL108/apl108.html" class="course-card">APL108</a>
-    <a href="./CVL111/cvl111.html" class="course-card">CVL111</a>
-    <a href="./CVL121/cvl121.html" class="course-card">CVL121</a>
-    <a href="./CVL141/cvl141.html" class="course-card">CVL141</a>
-  </main>
-  <h1>Current Semester Resources</h1>
+    <h1>Previous Semester Resources</h1>
     <main class="course-grid">
-    <a href="./APL 107 New/index.html" class="course-card">APL107</a>
-    <a href="./APL 108 New/index.html" class="course-card">APL108</a>
-    <a href="./CVL 111 New/index.html" class="course-card">CVL111</a>
-    <a href="./CVL 121 New/index.html" class="course-card">CVL121</a>
-    <a href="./CVL 141 New/index.html" class="course-card">CVL141</a>
-  </main>
-  
-</body>
-<script>
-  const toggleBtn = document.getElementById("toggle-theme");
-  const body = document.body;
+      <a href="./APL107/apl107.html" class="course-card">APL107</a>
+      <a href="./APL108/apl108.html" class="course-card">APL108</a>
+      <a href="./CVL111/cvl111.html" class="course-card">CVL111</a>
+      <a href="./CVL121/cvl121.html" class="course-card">CVL121</a>
+      <a href="./CVL141/cvl141.html" class="course-card">CVL141</a>
+    </main>
+    <h1>Current Semester Resources</h1>
+    <main class="course-grid">
+      <a href="./APL 107 New/index.html" class="course-card">APL107</a>
+      <a href="./APL 108 New/index.html" class="course-card">APL108</a>
+      <a href="./CVL 111 New/index.html" class="course-card">CVL111</a>
+      <a href="./CVL 121 New/index.html" class="course-card">CVL121</a>
+      <a href="./CVL 141 New/index.html" class="course-card">CVL141</a>
+    </main>
+  </body>
+  <script>
+    const toggleBtn = document.getElementById("toggle-theme");
+    const body = document.body;
 
-  // Load saved preference
-  if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark");
-    toggleBtn.textContent = "☀️ Light Mode";
-  }
-
-  toggleBtn.addEventListener("click", () => {
-    body.classList.toggle("dark");
-    if (body.classList.contains("dark")) {
-      localStorage.setItem("theme", "dark");
+    // Load saved preference
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark");
       toggleBtn.textContent = "☀️ Light Mode";
-    } else {
-      localStorage.setItem("theme", "light");
-      toggleBtn.textContent = "🌙 Dark Mode";
     }
-  });
-</script>
 
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+        toggleBtn.textContent = "☀️ Light Mode";
+      } else {
+        localStorage.setItem("theme", "light");
+        toggleBtn.textContent = "🌙 Dark Mode";
+      }
+    });
+  </script>
 </html>

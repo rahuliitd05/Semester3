@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background-color: #f9f9f9;
   color: #333;
   text-align: center;
@@ -10,7 +10,7 @@ header {
   padding: 2rem;
   background-color: #4f46e5;
   color: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .course-grid {
@@ -26,7 +26,7 @@ header {
   background-color: white;
   padding: 3rem 1rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
@@ -40,8 +40,9 @@ header {
 }
 
 /* Toggle Button */
-#toggle-theme {
-  margin-top: 1rem;
+#toggle-theme,
+#announcements-btn {
+  margin: 0.5rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   background: white;
@@ -52,8 +53,18 @@ header {
   transition: all 0.3s ease;
 }
 
-#toggle-theme:hover {
+#toggle-theme:hover,
+#announcements-btn:hover {
   background: #e0e7ff;
+}
+
+#announcements-btn {
+  background: #10b981;
+  color: white;
+}
+
+#announcements-btn:hover {
+  background: #059669;
 }
 
 /* Dark Mode Styles */
@@ -77,7 +88,17 @@ body.dark .course-card:hover {
   background-color: #2c2c2c;
 }
 
-body.dark #toggle-theme {
+body.dark #toggle-theme,
+body.dark #announcements-btn {
   background-color: #2c2c2c;
   color: #c7d2fe;
+}
+
+body.dark #announcements-btn {
+  background-color: #047857;
+  color: white;
+}
+
+body.dark #announcements-btn:hover {
+  background-color: #065f46;
 }

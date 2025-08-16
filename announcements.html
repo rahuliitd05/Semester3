@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Announcements - Academic Resources</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="./Assets/favicon.png" />
+    <style>
+      .announcements-container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 0 2rem;
+      }
+
+      .announcement-card {
+        background: white;
+        border-radius: 1rem;
+        padding: 2rem;
+        margin: 1.5rem 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-left: 4px solid #4f46e5;
+        text-align: left;
+      }
+
+      .announcement-date {
+        color: #6b7280;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .announcement-title {
+        color: #4f46e5;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      .announcement-content {
+        line-height: 1.6;
+        color: #374151;
+      }
+
+      .back-button {
+        display: inline-block;
+        margin: 2rem;
+        padding: 0.75rem 1.5rem;
+        background: #4f46e5;
+        color: white;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .back-button:hover {
+        background: #3730a3;
+        transform: translateY(-2px);
+      }
+
+      /* Dark mode styles for announcements */
+      body.dark .announcement-card {
+        background: #1e1e1e;
+        border-left-color: #c7d2fe;
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+      }
+
+      body.dark .announcement-date {
+        color: #9ca3af;
+      }
+
+      body.dark .announcement-title {
+        color: #c7d2fe;
+      }
+
+      body.dark .announcement-content {
+        color: #d1d5db;
+      }
+
+      body.dark .back-button {
+        background: #2c2c2c;
+        color: #c7d2fe;
+      }
+
+      body.dark .back-button:hover {
+        background: #374151;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>📢 Announcements</h1>
+      <p>Stay updated with the latest news and important information.</p>
+      <button id="toggle-theme">🌙 Dark Mode</button>
+    </header>
+
+    <a href="index.html" class="back-button">← Back to Home</a>
+
+    <div class="announcements-container">
+
+
+        <div class="announcement-card">
+        <div class="announcement-date">August 1, 2025</div>
+        <div class="announcement-title">📚 Updated Course Materials</div>
+        <div class="announcement-content">
+        New lecture notes and assignments have been added for APL107, APL108,
+        and CVL courses. Please check your respective course sections for the
+        latest updates.
+        </div>
+        </div>
+
+        <div class="announcement-card">
+        <div class="announcement-date">July 24, 2025</div>
+        <div class="announcement-title">🎉 Welcome to Semester 3!</div>
+        <div class="announcement-content">
+        Welcome to the new semester! All course materials for Semester 3 have
+        been uploaded and are ready for access. Make sure to check the
+        "Current Semester Resources" section for the latest materials.
+        </div>
+        </div>
+    </div>
+    <script>
+      const toggleBtn = document.getElementById("toggle-theme");
+      const body = document.body;
+
+      // Load saved preference
+      if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark");
+        toggleBtn.textContent = "☀️ Light Mode";
+      }
+
+      toggleBtn.addEventListener("click", () => {
+        body.classList.toggle("dark");
+        if (body.classList.contains("dark")) {
+          localStorage.setItem("theme", "dark");
+          toggleBtn.textContent = "☀️ Light Mode";
+        } else {
+          localStorage.setItem("theme", "light");
+          toggleBtn.textContent = "🌙 Dark Mode";
+        }
+      });
+    </script>
+  </body>
+</html>
