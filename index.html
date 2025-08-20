@@ -28,6 +28,7 @@
       <a href="./CVL121/cvl121.html" class="course-card">CVL121</a>
       <a href="./CVL141/cvl141.html" class="course-card">CVL141</a>
     </main>
+
     <h1>Current Semester Resources</h1>
     <main class="course-grid">
       <a href="./APL 107 New/index.html" class="course-card">APL107</a>
@@ -50,11 +51,9 @@
             <p><span class="contact-icon">👤</span>Rahul Kumar</p>
             <p><span class="contact-icon">📱</span>+91 6207079074</p>
             <p>
-              <a href="mailto:ce1240049@iitd.ac.in"><span class="footer-link">📧  Email</span></a>
+              <a href="mailto:ce1240049@iitd.ac.in"><span class="footer-link">📧 Email</span></a>
             </p>
-            <p>
-              <span class="contact-icon">🏠</span>Aravali House
-            </p>
+            <p><span class="contact-icon">🏠</span>Aravali House</p>
           </div>
         </div>
 
@@ -69,15 +68,17 @@
 
       <div class="footer-bottom">
         <p>&copy; 2025 Academic Resources Hub. Made with ❤️ for friends.</p>
-        <p class="last-updated">Last updated: August 17 2025</p>
+        <p class="last-updated">Last updated: August 20 2025</p>
+        <!-- 👇 Visit counter will show up here -->
+        <p id="visit-counter">👀 Total Visits: Loading...</p>
       </div>
     </footer>
   </body>
   <script>
+    // Theme toggle
     const toggleBtn = document.getElementById("toggle-theme");
     const body = document.body;
 
-    // Load saved preference
     if (localStorage.getItem("theme") === "dark") {
       body.classList.add("dark");
       toggleBtn.textContent = "☀️ Light Mode";
@@ -93,5 +94,18 @@
         toggleBtn.textContent = "🌙 Dark Mode";
       }
     });
+
+    // 👇 Visit Counter (CounterAPI)
+    fetch("https://api.counterapi.dev/v1/rahuliitd05/semester3/up")
+      .then((res) => res.json())
+      .then((res) => {
+        document.getElementById("visit-counter").innerText =
+          "👀 Total Visits: " + res.count;
+      })
+      .catch((err) => {
+        console.error("Visit counter error:", err);
+        document.getElementById("visit-counter").innerText =
+          "👀 Total Visits: N/A";
+      });
   </script>
 </html>
