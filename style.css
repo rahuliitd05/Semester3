@@ -200,3 +200,9 @@ body.dark .footer-bottom {
   border-top-color: rgba(199, 210, 254, 0.2);
   color: #9ca3af;
 }
+.image{
+  border:solid 2px #000000;
+  border-radius: 15px;
+  margin: 2rem ;
+  text-align: center;
+}
